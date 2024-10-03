@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(98, 45, 147);
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+.left-nav img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ddd;
+}
+
+.left-nav h1 {
+    padding-bottom: 5px;
+}
+
+.right-nav nav {
+    display: flex;
+    gap: 20px;
+}
+
+.right-nav nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+}
