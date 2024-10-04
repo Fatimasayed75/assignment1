@@ -35,6 +35,62 @@ header {
     font-weight: bold;
 }
 
+#welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+#welcome-img {
+    height: 450px;
+    width: 450px;
+    margin-left: 2rem;
+    border-radius: 50%;
+}
+
+.join-us-button {
+    height: 30px;
+    width: 100px;
+    border-color: #622d93;
+    background-color: #622d93;
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.welcome-left {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    gap: 20px;
+}
+
+.join-us-button:hover {
+    background-color: #FFF;
+    color: #000;
+    border-radius: 5px;
+}
+
+.welcome-left h1 {
+    font-size: 3rem;
+    margin: 0;
+    width: 90%;
+    color: #622d93;
+    font-weight: 900;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.welcome-left p {
+    font-size: 1.2rem;
+}
+
 
 /* Burger Menu Styles */
 .burger-menu {
