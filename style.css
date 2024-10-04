@@ -26,10 +26,160 @@ header {
 .right-nav nav {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .right-nav nav a {
     text-decoration: none;
     color: #ddd;
     font-weight: bold;
+}
+
+/* the logo text style */
+.text-logo {
+    /* font-size: 2rem;
+    font-weight: bold;
+    color: #333; */
+    text-transform: uppercase;
+    margin: 11px 0px 11px 0;
+    pointer-events: initial;
+    padding: 0;
+    /* word-wrap: break-word; */
+    position: relative;
+    /* font-family: Oswald, sans-serif; */
+    text-decoration: none;
+}
+
+.text-logo>a {
+    text-decoration: none;
+    color: white;
+}
+
+/* the dark mode btn section */
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .page-preview-header {
+    background: #333333;
+}
+
+.dark-mode .page-preview-header>a {
+    color: #ffffff;
+}
+
+#darkModeBtn {
+    cursor: pointer;
+    padding: 5px 10px;
+    /* background-color: #4CAF50; */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+/* From Uiverse.io by cuzpq */
+.theme-checkbox {
+    --toggle-size: 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 6.25em;
+    height: 3.125em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 99em;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+    content: "";
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0.438em;
+    left: 0.438em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+    left: calc(100% - 2.25em - 0.438em);
+    background-position: 0;
+}
+
+.theme-checkbox:checked {
+    background-position: 100%;
+}
+
+/* the teacher section */
+#gallery-wrapper,
+#our-teacher-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery-wrapper {
+    background-color: rgb(224, 224, 224);
+}
+
+#gallery-wrapper>h1,
+#our-teacher-wrapper>h1 {
+    width: 90%;
+    font-size: 3rem;
+    color: #622d93;
+    ;
+    font-weight: 900;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    /* equivalent to 25vw 25vw 25vw */
+    grid-template-rows: repeat(2, 35vh);
+    gap: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    border: black;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#our-teacher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#our-teacher>* {
+    width: 50%;
+    margin-left: 5vw;
+}
+
+#our-teacher>img {
+    width: 500px;
 }

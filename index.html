@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunshine Kindergarten</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon"  href="https://thenounproject.com/favicon.ico" rel="icon"/>
 </head>
+
 <body>
 
     <header>
 
         <div class="left-nav">
-            <img class="logo" src="#" alt="logo">
-            <h1>Sunshine Kindergarten</h1>
+            <img class="logo" src="https://thenounproject.com/apple-touch-icon.png" alt="logo">
+            <h3 class="text-logo">
+                <a href="/">Sunshine Kindergarten</a>
+            </h3>
+            <!-- <h1>Sunshine Kindergarten</h1> -->
         </div>
 
         <div class="right-nav">
@@ -24,6 +29,9 @@
                 <a href="#">EVENTS</a>
                 <a href="#">ABOUT</a>
                 <a href="#">CONTACT</a>
+                <a href="#" id="darkModeBtn">
+                    <input type="checkbox" class="theme-checkbox">
+                </a>
             </nav>
         </div>
 
@@ -33,9 +41,45 @@
     <section></section>
     <section></section>
     <section></section>
-    <section></section>
+    <section>
+        <!--Teacher Section-->
+        <div id="our-teacher-wrapper">
+            <h1>Our Teacher</h1>
+            <div id="our-teacher">
+                <div id="our-teacher-info">
+                    <h1>Ms. Jane Smith</h1>
+                    <p>
+                        Ms. Jane Smith is a warm and energetic kindergarten teacher with a
+                        passion for nurturing young minds. With over ten years of
+                        experience in early childhood education, she creates a welcoming
+                        and playful learning environment where curiosity and creativity
+                        thrive. Ms. Smith is known for her gentle approach, guiding her
+                        students with patience and kindness as they explore the basics of
+                        reading, math, and social skills. She often incorporates arts and
+                        crafts, music, and interactive storytelling into her lessons,
+                        making every day fun and engaging. Her bright smile and
+                        encouraging words make her classroom a place where children feel
+                        safe, confident, and excited to learn.
+                    </p>
+                </div>
+                <img src="https://images.pexels.com/photos/8612993/pexels-photo-8612993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="jane-smith" />
+            </div>
+        </div>
+    </section>
 
     <footer></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeBtn = document.getElementById('darkModeBtn');
+            const body = document.body;
+    
+            darkModeBtn.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+    
 
 </body>
 
