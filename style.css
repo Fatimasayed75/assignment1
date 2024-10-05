@@ -35,6 +35,8 @@ header {
     font-weight: bold;
 }
 
+/* Welcome section */
+
 #welcome {
     display: flex;
     flex-direction: row;
@@ -89,6 +91,69 @@ header {
 
 .welcome-left p {
     font-size: 1.2rem;
+}
+
+/* Weekly schedule section */
+.weekly-schedule {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+table caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #622d93;
+    font-weight: 900;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #622d93;
+    color: white;
+    font-weight: bold;
+}
+
+tr {
+    background-color: #fdf7f7;
+}
+
+/* Add some hover effects */
+tr:hover {
+    background-color: #9c84b2b1;
+}
+
+/* tr:nth-child(odd) {
+    background-color: #f6f4f4;
+} */
+
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        width: 100%;
+    }
+
+    th, td {
+        box-sizing: border-box;
+    }
 }
 
 
