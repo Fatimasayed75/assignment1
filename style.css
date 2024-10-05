@@ -118,10 +118,11 @@ table caption {
     color: #622d93;
     font-weight: 900;
     text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
-  }
-  
+}
 
-th, td {
+
+th,
+td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
@@ -147,11 +148,18 @@ tr:hover {
 } */
 
 @media screen and (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         width: 100%;
     }
 
-    th, td {
+    th,
+    td {
         box-sizing: border-box;
     }
 }
@@ -191,6 +199,25 @@ tr:hover {
 
     .burger-menu {
         display: flex;
+    }
+
+    #welcome {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #welcome-img {
+        margin-left: 0;
+        height: 200px;
+        width: 200px;
+    }
+
+    #our-teacher {
+        flex-direction: column;
+    }
+
+    #our-teacher> img {
+        width: 280px;
     }
 }
 
@@ -336,11 +363,12 @@ body.dark-mode {
 
 #our-teacher>* {
     width: 50%;
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
 }
-
-#our-teacher>img {
-    width: 500px;
+@media (min-width: 1024px) {
+    #our-teacher>img {
+        width: 500px;
+    }
 }
 
 /* Footer styling */
@@ -368,17 +396,20 @@ footer {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.contact-info, .social-media {
+.contact-info,
+.social-media {
     width: 45%;
 }
 
-.contact-info p, .social-media p {
+.contact-info p,
+.social-media p {
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.contact-info a, .social-media a {
+.contact-info a,
+.social-media a {
     color: #ffda79;
     text-decoration: none;
     font-size: 1rem;
@@ -386,7 +417,8 @@ footer {
     margin-bottom: 0.3rem;
 }
 
-.contact-info a:hover, .social-media a:hover {
+.contact-info a:hover,
+.social-media a:hover {
     color: #ffe100;
     text-decoration: underline;
 }
