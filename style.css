@@ -342,3 +342,78 @@ body.dark-mode {
 #our-teacher>img {
     width: 500px;
 }
+
+/* Footer styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #622d93;
+    padding: 0.5rem 1rem;
+    color: #efefef;
+    margin-top: 2rem;
+}
+
+.upper-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.contact-info, .social-media {
+    width: 45%;
+}
+
+.contact-info p, .social-media p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a, .social-media a {
+    color: #ffda79;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.contact-info a:hover, .social-media a:hover {
+    color: #ffe100;
+    text-decoration: underline;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media a:last-child {
+    margin-right: 0;
+}
+
+.copy-right {
+    margin-top: 1.5rem;
+}
+
+.copy-right p {
+    margin: 0.5rem 0;
+}
+
+.copy-right a {
+    color: #ffda79;
+    text-decoration: none;
+}
+
+.copy-right a:hover {
+    color: #ffe100;
+    text-decoration: underline;
+}
