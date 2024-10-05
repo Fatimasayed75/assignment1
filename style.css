@@ -98,6 +98,7 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: #0ff0;
 }
 
 table {
@@ -134,9 +135,9 @@ th {
     font-weight: bold;
 }
 
-tr {
+/* tr {
     background-color: #fdf7f7;
-}
+} */
 
 /* Add some hover effects */
 tr:hover {
