@@ -470,3 +470,15 @@ footer {
     color: #ffe100;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 700px) {
+    .contact-info p,
+    .social-media p {
+        font-size: 0.8rem;
+    }
+    
+    .contact-info a,
+    .social-media a {
+        font-size: 0.7rem;
+    }
+}
