@@ -161,6 +161,25 @@ tr:hover {
 
     th,
     td {
+        font-size: 0.6rem;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        width: 100%;
+    }
+
+    th,
+    td {
+        font-size: 0.4rem;
         box-sizing: border-box;
     }
 }
