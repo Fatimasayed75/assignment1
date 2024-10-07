@@ -21,31 +21,47 @@
             <!-- <h1>Sunshine Kindergarten</h1> -->
         </div>
 
+        <script>
+            function openNav() {
+                document.getElementById("mobile-menu").style.display = "flex";
+            }
+
+            function closeNav() {
+                document.getElementById("mobile-menu").style.display = "none";
+            }
+        </script>
+
         <div class="right-nav">
             <nav>
+                <span class="navy" onclick="openNav()">☰</span>
                 <div class="menu-toggle" id="mobile-menu">
-                    <span class="bar">
-                        <a href="#">HOME</a>
-                    </span>
-                    <span class="bar">
-                        <a href="#">EDUCATION</a>
-                    </span>
-                    <span class="bar">
-                        <a href="#">GALLERY</a>
-                    </span><span class="bar">
-                        <a href="#">EVENTS</a>
-                    </span>
-                    <span class="bar">
-                        <a href="#">ABOUT</a>
-                    </span>
-                    <span class="bar">
-                        <a href="#">CONTACT</a>
-                    </span>
-                    <span class="bar">
-                        <a href="#" id="darkModeBtn">
-                            <input type="checkbox" class="theme-checkbox">
-                        </a>
-                    </span>
+                    <div class="close">
+                        <span style="font-size: 30px; cursor: pointer;" onclick="closeNav()">&times;</span>
+                    </div>
+                    <div class="menu-menu">
+                        <span class="bar">
+                            <a href="#">HOME</a>
+                        </span>
+                        <span class="bar">
+                            <a href="#">EDUCATION</a>
+                        </span>
+                        <span class="bar">
+                            <a href="#">GALLERY</a>
+                        </span><span class="bar">
+                            <a href="#">EVENTS</a>
+                        </span>
+                        <span class="bar">
+                            <a href="#">ABOUT</a>
+                        </span>
+                        <span class="bar">
+                            <a href="#">CONTACT</a>
+                        </span>
+                        <!-- <span class="bar"> -->
+                        <!-- <a href="#" id="darkModeBtn">
+                                <input type="checkbox" class="theme-checkbox">
+                            </a>
+                        </span> -->
+                    </div>
                 </div>
                 <div class="nav-list">
                     <a href="#">HOME</a>
@@ -54,9 +70,9 @@
                     <a href="#">EVENTS</a>
                     <a href="#">ABOUT</a>
                     <a href="#">CONTACT</a>
-                    <a href="#" id="darkModeBtn">
+                    <!-- <a href="#" id="darkModeBtn">
                         <input type="checkbox" class="theme-checkbox">
-                    </a>
+                    </a> -->
                 </div>
             </nav>
         </div>
@@ -152,8 +168,39 @@
             </table>
         </div>
     </section>
-    <section></section>
-    <section></section>
+    <section id="photo-gallery">
+        <h1 class="captiontxt">Class Activities</h1>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/150" alt="Activity 1">
+            <img src="https://via.placeholder.com/150" alt="Activity 2">
+            <img src="https://via.placeholder.com/150" alt="Activity 3">
+            <img src="https://via.placeholder.com/150" alt="Activity 4">
+            <img src="https://via.placeholder.com/150" alt="Activity 5">
+            <img src="https://via.placeholder.com/150" alt="Activity 6">
+        </div>
+    </section>
+
+    <section id="parent-resources">
+        <h1 class="captiontxt">Parent Resources & Announcements</h1>
+        <div class="resources">
+            <article>
+                <h3>Resource 1</h3>
+                <p>Details about resource 1.</p>
+            </article>
+            <article>
+                <h3>Resource 2</h3>
+                <p>Details about resource 2.</p>
+            </article>
+            <article>
+                <h3>Announcement 1</h3>
+                <p>Details about announcement 1.</p>
+            </article>
+            <article>
+                <h3>Announcement 2</h3>
+                <p>Details about announcement 2.</p>
+            </article>
+        </div>
+    </section>
     <section>
         <!--Teacher Section-->
         <div id="our-teacher-wrapper">
@@ -179,6 +226,42 @@
                     alt="jane-smith" />
             </div>
         </div>
+        <input id="switch" type="checkbox" id="darkModeBtn">
+        <div class="app">
+            <div class="body">
+
+                <div class="phone">
+
+                    <div class="menu">
+                        <div class="time">4:20</div>
+                        <div class="icons">
+                            <div class="network"></div>
+                            <div class="battery"></div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="circle">
+                            <div class="crescent"></div>
+                        </div>
+
+                        <label for="switch">
+                            <div class="toggle"></div>
+                            <div class="names">
+                                <p class="light">Light</p>
+                                <p class="dark">Dark</p>
+
+                            </div>
+                        </label>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- </input> -->
     </section>
 
 
@@ -206,22 +289,34 @@
             <p>
                 <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
             </p> <br>
-            <p>&copy; 2024 Sunshine Kindergarten. All rights reserved.</p> 
+            <p>&copy; 2024 Sunshine Kindergarten. All rights reserved.</p>
         </div>
 
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const darkModeBtn = document.getElementById('darkModeBtn');
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('switch');
             const body = document.body;
-
-            darkModeBtn.addEventListener('click', function () {
-                body.classList.toggle('dark-mode');
+    
+            darkModeToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('darkMode', 'disabled');
+                }
             });
+    
+            // Check for saved dark mode preference
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                darkModeToggle.checked = true;
+                body.classList.add('dark-mode');
+            }
         });
     </script>
-
+    
 
 </body>
 

@@ -110,7 +110,7 @@ table {
 }
 
 
-table caption {
+table caption, .captiontxt {
     font-size: 2em;
     width: 90%;
     font-weight: bold;
@@ -200,6 +200,46 @@ tr:hover {
     margin: 4px 0;
 }
 
+.menu-toggle {
+    display: none;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    /* align-items: center; */
+    background-color: rgb(98 45 147 / 73%);
+}
+
+.menu-toggle a {
+    padding: 8px;
+    text-decoration: none;
+    /* font-size: 36px; */
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.navy {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-menu {
+    display: flex;
+    /* position: absolute; */
+    /* right: 0; */
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.close {
+    margin-left: 10px;
+}
+
 /* Responsive Styles */
 @media (max-width: 970px) {
     .right-nav .nav-list {
@@ -237,9 +277,17 @@ tr:hover {
         flex-direction: column;
     }
 
-    #our-teacher> img {
+    #our-teacher>img {
         width: 280px;
     }
+
+}
+
+@media (min-width: 969px) {
+    .navy {
+        display: none;
+    }
+
 }
 
 /* the logo text style */
@@ -269,6 +317,11 @@ body.dark-mode {
     color: #ffffff;
 }
 
+/* article.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+} */
+
 .dark-mode .page-preview-header {
     background: #333333;
 }
@@ -287,54 +340,291 @@ body.dark-mode {
     margin-left: 10px;
 }
 
-/* From Uiverse.io by cuzpq */
-.theme-checkbox {
-    --toggle-size: 7px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 6.25em;
-    height: 3.125em;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background-size: 205%;
-    background-position: 0;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 99em;
-    position: relative;
-    cursor: pointer;
-    font-size: var(--toggle-size);
+/* the dark mode btn section */
+
+.credit {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    color: white;
 }
 
-.theme-checkbox::before {
-    content: "";
-    width: 2.25em;
-    height: 2.25em;
+.credit a {
+    color: inherit;
+}
+
+/* Main Circle */
+.main-circle {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 100%;
+    background: linear-gradient(40deg, #FF0080, #FF8C00 70%);
     position: absolute;
-    top: 0.438em;
-    left: 0.438em;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background-size: 205%;
-    background-position: 100%;
-    border-radius: 50%;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
+    z-index: 1;
+    left: 50%;
+    -webkit-transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%)
 }
 
-.theme-checkbox:checked::before {
-    left: calc(100% - 2.25em - 0.438em);
-    background-position: 0;
+/* Phone */
+.phone {
+    position: fixed;
+    z-index: 2;
+    bottom: 24px;
+    right: 24px;
+    width: 15rem;
+    height: 16rem;
+    background-color: inherit;
+    -webkit-box-shadow: 0 4px 35px rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 35px rgba(0, 0, 0, .1);
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
-.theme-checkbox:checked {
-    background-position: 100%;
+
+
+/* Top */
+.menu {
+    /*   background-color: blue; */
+    font-size: 80%;
+    opacity: .4;
+    padding: .8rem 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
+
+.icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: .5rem;
+}
+
+.battery {
+    width: .85rem;
+    height: .45rem;
+    background-color: black;
+}
+
+.network {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6.8px 7.2px 6.8px;
+    border-color: transparent transparent black transparent;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    margin: .12rem .5rem;
+}
+
+/* Middle */
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    -webkit-transform: translateY(5%);
+    -ms-transform: translateY(5%);
+    transform: translateY(5%);
+}
+
+.circle {
+    position: relative;
+    border-radius: 100%;
+    width: 6rem;
+    height: 6rem;
+    background: linear-gradient(40deg, #FF0080, #FF8C00 70%);
+    margin: auto;
+}
+
+.crescent {
+    position: absolute;
+    border-radius: 100%;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+    transform-origin: top right;
+    -webkit-transition: -webkit-transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: -webkit-transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform .6s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+label,
+.toggle {
+    height: 2.8rem;
+    border-radius: 100px;
+}
+
+label {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 100px;
+    position: relative;
+    margin: 1.8rem 0 4rem 0;
+    cursor: pointer;
+}
+
+.toggle {
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+    -webkit-transition: -webkit-transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: -webkit-transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.names {
+    font-size: 90%;
+    font-weight: bolder;
+    color: black;
+    width: 100%;
+    /* margin-left: 17.5%; */
+    /* margin-top: 6.5%; */
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dark {
+    opacity: .5;
+}
+
+.mark {
+    border-radius: 100px;
+    background-color: black;
+}
+
+.time {
+    color: black;
+}
+
+.light .dark {
+    height: 100%;
+    width: 50%;
+}
+
+/* -------- Switch Styles ------------*/
+[type="checkbox"] {
+    display: none;
+}
+
+/* Toggle */
+[type="checkbox"]:checked+.app .toggle {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    background-color: #34323D;
+}
+
+[type="checkbox"]:checked+.app .dark {
+    opacity: 1;
+    color: white;
+}
+
+[type="checkbox"]:checked+.app .light {
+    opacity: 1;
+    color: white;
+}
+
+/* App */
+[type="checkbox"]:checked+.app .body {
+    background-color: #26242E;
+    color: white;
+}
+
+/* Circle */
+[type="checkbox"]:checked+.app .crescent {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background: #26242E;
+}
+
+[type="checkbox"]:checked+.app .circle {
+    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
+}
+
+[type="checkbox"]:checked+.app .main-circle {
+    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
+}
+
+[type="checkbox"]:checked+.time {
+    color: white;
+}
+
+[type="checkbox"]:checked+.app .body .phone .menu .time {
+    color: white;
+}
+
+[type="checkbox"]:checked+.app .body .phone .menu .icons .network {
+    border-color: transparent transparent white transparent;
+}
+
+[type="checkbox"]:checked+.app .body .phone .menu .icons .battery {
+    background-color: white;
+}
+
+[type="checkbox"]:checked+.app .body {
+    border-radius: 40px;
+    ;
+}
+
+.menu {
+    /*   background-color: blue; */
+    font-size: 80%;
+    opacity: .4;
+    padding: .8rem 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* the darkbtn done. */
 
 /* the teacher section */
 #gallery-wrapper,
@@ -386,6 +676,7 @@ body.dark-mode {
     width: 50%;
     /* margin-left: 5vw; */
 }
+
 @media (min-width: 1024px) {
     #our-teacher>img {
         width: 500px;
@@ -472,13 +763,51 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+
     .contact-info p,
     .social-media p {
         font-size: 0.8rem;
     }
-    
+
     .contact-info a,
     .social-media a {
         font-size: 0.7rem;
     }
+}
+
+
+#photo-gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+#photo-gallery .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#photo-gallery .gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#parent-resources {
+    padding: 20px;
+}
+
+#parent-resources .resources {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#parent-resources .resources article {
+    /* background-color: #f9f9f9; */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 2px rgba(126, 126, 126, 0.1);
 }
