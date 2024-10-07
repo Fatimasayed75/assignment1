@@ -112,7 +112,7 @@ table {
 
 table caption, .captiontxt {
     font-size: 2em;
-    width: 90%;
+    width: 100%;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
@@ -659,6 +659,14 @@ label {
     gap: 20px;
 }
 
+#photo-gallery h1 {
+    font-size: 3rem;
+    width: 100%;
+    color: #622d93;
+    font-weight: 900;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
 .gallery-img {
     width: 100%;
     border: black;
@@ -799,14 +807,37 @@ footer {
     padding: 20px;
 }
 
-#parent-resources .resources {
+#parent-resources .announcements-resources {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#parent-resources .resources article {
+#parent-resources .announcements-resources article {
     /* background-color: #f9f9f9; */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 2px rgba(126, 126, 126, 0.1);
+}
+
+#parent-resources h1 {
+    font-size: 3rem;
+    width: 100%;
+    color: #622d93;
+    font-weight: 900;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.resource {
+    background-color: rgba(0, 208, 240, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 2px rgba(126, 126, 126, 0.1);
+}
+
+
+.announcement {
+    background-color: rgba(98, 45, 147, 0.1);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px 2px rgba(126, 126, 126, 0.1);
