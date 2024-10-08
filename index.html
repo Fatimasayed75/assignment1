@@ -201,11 +201,13 @@
             </article>
             <article class="announcement">
                 <h3>Announcement: Happy Birthday! 🎉</h3>
-                <p>This week, we will celebrate Fatima’s birthday! Let’s all sing happy birthday and wish her a wonderful year ahead!</p>
+                <p>This week, we will celebrate Fatima’s birthday! Let’s all sing happy birthday and wish her a
+                    wonderful year ahead!</p>
             </article>
             <article class="announcement">
                 <h3>Announcement: Parent-Teacher Conferences 🗓️</h3>
-                <p>Mark your calendars! Parent-Teacher Conferences will be held on 20-October-2024. More details will be sent home soon!</p>
+                <p>Mark your calendars! Parent-Teacher Conferences will be held on 20-October-2024. More details will be
+                    sent home soon!</p>
             </article>
         </div>
     </section>
@@ -234,13 +236,15 @@
                     alt="jane-smith" />
             </div>
         </div>
-        <input id="switch" type="checkbox" id="darkModeBtn">
+        <input id="switch" type="checkbox">
         <div class="app">
             <div class="body">
 
-                <div class="phone">
-
-                    <div class="menu">
+                <div class="dark-conrainor">
+                    <a href="#" id="darkModeBtn">
+                        <input type="checkbox" class="theme-checkbox">
+                    </a>
+                    <!-- <div class="menu">
                         <div class="time">4:20</div>
                         <div class="icons">
                             <div class="network"></div>
@@ -263,7 +267,7 @@
                         </label>
 
 
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -303,28 +307,16 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const darkModeToggle = document.getElementById('switch');
+        document.addEventListener('DOMContentLoaded', function () {
+            const darkModeBtn = document.getElementById('darkModeBtn');
             const body = document.body;
-    
-            darkModeToggle.addEventListener('change', function() {
-                if (this.checked) {
-                    body.classList.add('dark-mode');
-                    localStorage.setItem('darkMode', 'enabled');
-                } else {
-                    body.classList.remove('dark-mode');
-                    localStorage.setItem('darkMode', 'disabled');
-                }
+
+            darkModeBtn.addEventListener('click', function () {
+                body.classList.toggle('dark-mode');
             });
-    
-            // Check for saved dark mode preference
-            if (localStorage.getItem('darkMode') === 'enabled') {
-                darkModeToggle.checked = true;
-                body.classList.add('dark-mode');
-            }
         });
     </script>
-    
+
 
 </body>
 
