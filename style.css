@@ -40,9 +40,15 @@ body {
 }
 
 .right-nav .nav-list a {
+    padding: 7px;
     text-decoration: none;
     color: #ddd;
     font-weight: bold;
+    border-radius: 5px;
+}
+
+.nav-list a:hover {
+    background-color: #3f1e5f;
 }
 
 /* Welcome section */
